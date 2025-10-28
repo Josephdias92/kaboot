@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Host Dashboard | Kaboot</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header class="top-bar">
+      <a href="/" class="brand">Kaboot</a>
+      <span class="role-label">Host dashboard</span>
+    </header>
+
+    <main class="grid">
+      <section class="card">
+        <h2>Poll setup</h2>
+        <form id="poll-form" class="stack" autocomplete="off">
+          <label class="stack">
+            <span>Question</span>
+            <textarea id="question" rows="3" placeholder="What should we ask?" required></textarea>
+          </label>
+          <div class="options" id="options"></div>
+          <button type="button" id="add-option" class="button button-secondary">Add option</button>
+          <div class="form-actions">
+            <button type="submit" class="button" id="create-button">Create poll</button>
+            <button type="button" class="button button-secondary" id="update-button" disabled>
+              Save changes
+            </button>
+          </div>
+        </form>
+        <p class="hint">Add between 2 and 6 options. Each option can have up to 80 characters.</p>
+      </section>
+
+      <section class="card">
+        <h2>Game lobby</h2>
+        <p id="game-code" class="game-code">Waiting for poll…</p>
+        <div id="status" class="status">Create a poll to get started.</div>
+        <h3>Players</h3>
+        <ul id="player-list" class="player-list"></ul>
+      </section>
+
+      <section class="card">
+        <h2>Controls</h2>
+        <div class="stack">
+          <button class="button" id="start-button" disabled>Start poll</button>
+          <button class="button button-secondary" id="end-button" disabled>End poll</button>
+        </div>
+        <div class="results" id="results"></div>
+      </section>
+    </main>
+
+    <script type="module" src="/js/host.js"></script>
+  </body>
+</html>
