@@ -7,35 +7,11 @@
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
-    <header class="hero">
-      <h1>Kaboot</h1>
-      <p>Create live multiple-choice polls and see results in real time.</p>
-      <div class="hero-actions">
-        <a class="button" href="/host.html">Host a poll</a>
-        <a class="button button-secondary" href="/player.html">Join a poll</a>
-      </div>
-    </header>
+    <div id="root"></div>
 
-    <main class="content">
-      <section>
-        <h2>How it works</h2>
-        <ol>
-          <li>Host creates a poll question and shares the game code.</li>
-          <li>Players join from any device using the code and their display name.</li>
-          <li>Start the poll and watch the results update live.</li>
-        </ol>
-      </section>
-
-      <section>
-        <h2>Why Kaboot?</h2>
-        <p>
-          Kaboot is a lightweight alternative to complex quiz platforms. It is designed for
-          quick classroom check-ins, icebreakers, and remote team meetings. No accounts or
-          downloads required—just share the code and start polling instantly.
-        </p>
-      </section>
-    </main>
-
-    <footer class="footer">Built with ❤️ using Node.js and WebSockets.</footer>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel" data-presets="react" src="/js/app.jsx"></script>
   </body>
 </html>
