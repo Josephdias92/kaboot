@@ -7,39 +7,10 @@
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
-    <header class="top-bar">
-      <a href="/" class="brand">Kaboot</a>
-      <span class="role-label">Player console</span>
-    </header>
-
-    <main class="grid">
-      <section class="card">
-        <h2>Join a poll</h2>
-        <form id="join-form" class="stack" autocomplete="off">
-          <label class="stack">
-            <span>Game code</span>
-            <input type="text" id="join-code" maxlength="6" placeholder="123456" required />
-          </label>
-          <label class="stack">
-            <span>Display name</span>
-            <input type="text" id="display-name" maxlength="40" placeholder="Your name" required />
-          </label>
-          <button type="submit" class="button">Join</button>
-        </form>
-        <p class="hint">The host will share a six-digit game code with everyone.</p>
-      </section>
-
-      <section class="card">
-        <h2>Poll stage</h2>
-        <div id="player-status" class="status">Join a poll to get started.</div>
-        <div id="question-container" class="hidden">
-          <h3 id="current-question"></h3>
-          <div id="answer-options" class="answers"></div>
-        </div>
-        <div id="results" class="results"></div>
-      </section>
-    </main>
-
-    <script type="module" src="/js/player.js"></script>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone@7/babel.min.js"></script>
+    <script type="text/babel" data-presets="env,react" src="/js/player.js"></script>
   </body>
 </html>
